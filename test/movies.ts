@@ -1,0 +1,247 @@
+/**
+ * Test movie configurations.
+ * Add new movies here to include them in encoding tests.
+ *
+ * The download script fetches ALL available languages automatically.
+ * expectedStrings are used to validate decoding worked correctly.
+ * Strings should include both character names AND native language words.
+ */
+
+interface MovieConfig {
+    id: string;
+    name: string;
+    type?: string;
+    season?: number;
+    episode?: number;
+    expectedStrings?: Record<string, string[]>;
+}
+
+const movies: MovieConfig[] = [
+    {
+        id: 'tt0133093',
+        name: 'The Matrix',
+        expectedStrings: {
+            'en': ['Matrix', 'Neo', 'Trinity', 'Morpheus'],
+            'es': ['Matrix', 'está', 'tiempo'],
+            'fr': ['Matrix', 'être', 'vous'],
+            'de': ['Matrix', 'nicht', 'sind'],
+            'pt': ['Matrix', 'você', 'está'],
+            'it': ['Matrix', 'sono', 'questo'],
+            'ru': ['Матрица', 'Нео', 'знаю'],
+            'zh': ['矩陣', '母體', '尼歐', '黑客帝国'],
+            'ja': ['マトリックス', 'ネオ'],
+            'ko': ['매트릭스', '네오'],
+            'th': ['เมทริกซ์', 'นีโอ', 'ทรินิตี้'],
+            'vi': ['Ma Trận', 'không', 'được'],
+            'ar': ['ماتريكس', 'نيو', 'حسناً'],
+            'he': ['מטריקס', 'ניאו', 'בסדר'],
+            'iw': ['מטריקס', 'ניאו', 'בסדר'],
+            'el': ['Μάτριξ', 'Νέο', 'είναι'],
+            'tr': ['Matrix', 'için', 'değil'],
+            'pl': ['Matrix', 'jest', 'mnie'],
+            'cs': ['Matrix', 'jsem', 'jsme'],
+            'hu': ['Matrix', 'hogy', 'volt'],
+            'ro': ['Matrix', 'este', 'sunt'],
+            'bg': ['Матрица', 'това', 'Добре'],
+            'uk': ['Матриця', 'мене', 'знаю'],
+            'nl': ['Matrix', 'niet', 'zijn'],
+            'sv': ['Matrix', 'inte', 'till'],
+            'da': ['Matrix', 'ikke', 'skal'],
+            'no': ['Matrix', 'ikke', 'skal'],
+            'fi': ['Matrix', 'että', 'mitä'],
+            'id': ['Matrix', 'tidak', 'yang'],
+            'ms': ['Matrix', 'awak', 'saya'],
+            'hi': ['मैट्रिक्स', 'नहीं', 'क्या'],
+            'bn': ['ম্যাট্রিক্স', 'তুমি', 'আমার'],
+        }
+    },
+    {
+        id: 'tt4154796',
+        name: 'Avengers: Endgame',
+        expectedStrings: {
+            'en': ['Avengers', 'Thanos', 'that', 'know'],
+            'es': ['Thanos', 'bien', 'está', 'gemas'],
+            'fr': ['Thanos', 'vous', 'dans', 'fait'],
+            'de': ['Thanos', 'nicht', 'mich', 'sind'],
+            'pt': ['Thanos', 'para', 'está', 'isso'],
+            'it': ['Thanos', 'sono', 'bene', 'questo'],
+            'ru': ['Танос', 'есть', 'СТАРК', 'мене'],
+            'zh': ['時光爆竊', '變形俠醫', '復仇者'],
+            'ja': ['スコット', 'ストーン', 'キャップ', 'ありがとう'],
+            'ko': ['어벤져스', '타노스', '토니'],
+            'th': ['โทนี่', 'สก็อตต์', 'ธอร์', 'โอเค'],
+            'vi': ['Thanos', 'không', 'được', 'biết'],
+            'ar': ['ثانوس', 'حسناً', 'ماذا', 'أعرف'],
+            'he': ['תאנוס', 'בסדר', 'אנחנו', 'יודע'],
+            'iw': ['תאנוס', 'בסדר', 'אנחנו', 'יודע'],
+            'el': ['Θάνος', 'Εκδικητές', 'είναι'],
+            'tr': ['Thanos', 'Evet', 'Hayır', 'değil'],
+            'pl': ['Thanos', 'jest', 'mnie', 'Kamienie'],
+            'cs': ['Thanos', 'jsem', 'jsme', 'Kameny'],
+            'hu': ['Thanos', 'hogy', 'volt', 'kell'],
+            'ro': ['Thanos', 'asta', 'este', 'sunt'],
+            'bg': ['Танос', 'това', 'Добре', 'Какво'],
+            'uk': ['Танос', 'мене', 'тебе', 'знаю'],
+            'nl': ['Thanos', 'niet', 'zijn', 'maar'],
+            'sv': ['Thanos', 'inte', 'till', 'vill'],
+            'da': ['Thanos', 'ikke', 'skal', 'noget'],
+            'no': ['Thanos', 'ikke', 'dere', 'skal'],
+            'fi': ['Thanos', 'että', 'Mitä', 'vain'],
+            'id': ['Thanos', 'tidak', 'yang', 'kita'],
+            'ms': ['Thanos', 'awak', 'saya', 'yang'],
+            'hi': ['थानोस', 'नहीं', 'क्या', 'मुझे'],
+            'bn': ['থানোস', 'তুমি', 'আমার', 'আমরা'],
+            'fa': ['تانوس', 'باید', 'باشه', 'چیزی'],
+            'farsi-persian': ['تانوس', 'خیلی', 'باید', 'برای'],
+            'hr': ['Thanos', 'redu', 'nije', 'biti'],
+            'sr': ['Танос', 'redu', 'nije', 'bilo'],
+            'sk': ['Thanos', 'Dobre', 'kamene', 'teraz'],
+            'sl': ['Thanos', 'redu', 'nazaj', 'lahko'],
+            'mk': ['Танос', 'дека', 'беше', 'Добро'],
+            'is': ['Thanos', 'ekki', 'þetta', 'hann'],
+            'gl': ['Thanos', 'unha', 'está', 'tempo'],
+            'ur': ['تھانوس', 'نہیں', 'مجھے', 'ٹھیک'],
+            'si': ['තානොස්', 'නැහැ', 'කරන්න', 'කියලා'],
+            'my': ['သနော့စ်', 'ကျေးဇူး'],
+            'ml': ['താനോസ്', 'മലയാളം'],
+            'ta': ['தானோஸ்', 'நான்'],
+        }
+    },
+    {
+        id: 'tt1630029',
+        name: 'Avatar: The Way of Water',
+        expectedStrings: {
+            'en': ['Jake', 'Sully', 'Come', 'your'],
+            'es': ['Jake', 'Kiri', 'Vamos', 'aquí'],
+            'fr': ['Jake', 'vous', 'nous', 'suis'],
+            'de': ['Jake', 'Kiri', 'nicht', 'Musik'],
+            'pt': ['Jake', 'Kiri', 'Vamos', 'para'],
+            'it': ['Jake', 'sono', 'Andiamo', 'Papà'],
+            'ru': ['Джейк', 'Аватар', 'мене', 'его'],
+            'zh': ['阿凡達', '全能之母', '吐魯馬圖', '我看見你'],
+            'ja': ['ジェイク', 'ネテヤム', 'スパイダー', 'お母さん'],
+            'ko': ['아바타', '스파이더', '네테이얌', '감사합니다'],
+            'th': ['อวตาร', 'คิรี', 'ทู้ค', 'โลอัค'],
+            'vi': ['Jake', 'không', 'Không', 'được'],
+            'ar': ['جيك', 'أفاتار', 'حسنًا', 'كيري'],
+            'he': ['אווטאר', 'קדימה', 'בסדר', 'קירי'],
+            'iw': ['אווטאר', 'קדימה', 'בסדר', 'קירי'],
+            'el': ['Άβαταρ', 'Τζέικ', 'είναι'],
+            'tr': ['Jake', 'Kiri', 'Hadi', 'Hayır'],
+            'pl': ['Jake', 'Kiri', 'Sully', 'jest'],
+            'cs': ['Jake', 'Kiri', 'Pojď', 'jsem'],
+            'hu': ['Jake', 'Kiri', 'Gyere', 'hogy'],
+            'ro': ['Jake', 'asta', 'aici', 'sunt'],
+            'bg': ['Джейк', 'Хайде', 'Това', 'Кири'],
+            'uk': ['Джейк', 'Кірі', 'його', 'мене'],
+            'nl': ['Jake', 'niet', 'zijn', 'hier'],
+            'sv': ['Jake', 'Kiri', 'inte', 'till'],
+            'da': ['Jake', 'Kiri', 'ikke', 'skal'],
+            'no': ['Jake', 'ikke', 'igjen', 'dere'],
+            'fi': ['Jake', 'Kiri', 'Olen', 'Tule'],
+            'id': ['Jake', 'yang', 'kita', 'mereka'],
+            'ms': ['Jake', 'saya', 'awak', 'yang'],
+            'hi': ['जेक', 'पैंडोरा', 'नहीं', 'मुझे'],
+            'bn': ['জেক', 'আমার', 'আমাদের', 'বাবা'],
+            'farsi-persian': ['جیک', 'اینجا', 'باید', 'خیلی'],
+            'hr': ['Jake', 'Kiri', 'redu', 'Dođi'],
+            'sr': ['Џејк', 'Хајде', 'Кири', 'реду'],
+            'sk': ['Jake', 'Kiri', 'Poďme', 'Dobre'],
+            'sl': ['Jake', 'Kiri', 'Pridi', 'Gremo'],
+            'is': ['Jake', 'ekki', 'þetta', 'Komdu'],
+            'et': ['Jake', 'Kiri', 'pole', 'seda'],
+            'lt': ['Jake', 'Kiri', 'Taip', 'mūsų'],
+            'lv': ['Jake', 'viņu', 'Viņš', 'labi'],
+            'ku': ['جەیک', 'ئەوە', 'ئێمە', 'وەرە'],
+            'ur': ['جیک', 'نہیں', 'ٹھیک', 'مجھے'],
+            'si': ['ජේක්', 'එන්න', 'යන්න', 'තාත්තා'],
+            'ka': ['ჯეიკ', 'პანდორა'],
+        }
+    },
+    {
+        id: 'tt0944947',
+        name: 'Game of Thrones',
+        type: 'series',
+        season: 1,
+        episode: 1,
+        expectedStrings: {
+            'en': ['Stark', 'Winterfell', 'Night', 'Watch', 'King', 'North'],
+            'es': ['Stark', 'invierno', 'viene', 'Norte', 'Rey'],
+            'fr': ['Stark', 'hiver', 'vient', 'Nord', 'Roi'],
+            'de': ['Stark', 'Winter', 'naht', 'Norden', 'König'],
+            'pt': ['Stark', 'inverno', 'chegando', 'Norte', 'Rei'],
+            'it': ['Stark', 'inverno', 'arriva', 'Nord', 'Re'],
+            'ru': ['Старк', 'зима', 'близко', 'Север', 'Король'],
+            'zh': ['史塔克', '冬天', '來了', '北境', '國王'],
+            'ja': ['スターク', 'ウィンターフェル', '冬', '王'],
+            'ko': ['스타크', '윈터펠', '겨울', '왕'],
+            'th': ['สตาร์ค', 'ฤดูหนาว', 'กำลังมา'],
+            'vi': ['Stark', 'mùa', 'đông', 'đến', 'Vua'],
+            'ar': ['ستارك', 'الشتاء', 'قادم', 'الملك'],
+            'he': ['סטארק', 'החורף', 'מגיע', 'המלך'],
+            'iw': ['סטארק', 'החורף', 'מגיע', 'המלך'],
+            'el': ['Σταρκ', 'Χειμώνας', 'έρχεται', 'Βασιλιάς'],
+            'tr': ['Stark', 'Kış', 'geliyor', 'Kral'],
+            'pl': ['Stark', 'Zima', 'nadchodzi', 'Król'],
+            'cs': ['Stark', 'Zima', 'přichází', 'Král'],
+            'hu': ['Stark', 'Tél', 'közeleg', 'Király'],
+            'ro': ['Stark', 'Iarna', 'vine', 'Regele'],
+            'bg': ['Старк', 'Зимата', 'идва', 'Кралят'],
+            'uk': ['Старк', 'Зима', 'близько', 'Король'],
+            'nl': ['Stark', 'Winter', 'komt', 'Koning'],
+            'sv': ['Stark', 'Vintern', 'kommer', 'Kung'],
+            'da': ['Stark', 'Vinter', 'kommer', 'Konge'],
+            'no': ['Stark', 'Vinteren', 'kommer', 'Kongen'],
+            'fi': ['Stark', 'Talvi', 'tulee', 'Kuningas'],
+            'hi': ['स्टार्क', 'सर्दी', 'आ', 'रही', 'राजा'],
+        }
+    },
+    {
+        id: 'tt0088323',
+        name: 'The NeverEnding Story',
+        expectedStrings: {
+            'en': ['Bastian', 'Nothing', 'Atreyu', 'book'],
+            'es': ['Atreyu', 'Bastian', 'está', 'qué'],
+            'pt': ['Bastian', 'Atreyu', 'você', 'não'],
+            'fr': ['Atreyu', 'Bastian', 'vous', 'pas'],
+            'hu': ['Bastian', 'Semmi', 'Atreju'],
+        }
+    },
+    {
+        id: 'tt0116839',
+        name: 'Lawnmower Man 2: Beyond Cyberspace',
+        expectedStrings: {
+            'en': ['Jobe', 'cyberspace', 'virtual'],
+            'ru': ['Джоб', 'это', 'что', 'мой'],
+            'es': ['Jobe', 'esto', 'qué', 'para'],
+            'el': ['Τρέις', 'είναι', 'για', 'αυτό'],
+            'pl': ['Jobe', 'jest', 'nie'],
+        }
+    },
+    {
+        id: 'tt0086190',
+        name: 'Star Wars: Episode VI - Return of the Jedi',
+        expectedStrings: {
+            'en': ['Luke', 'Vader', 'Jedi', 'Force'],
+            'zh': ['維達', '路克', '絕地', '天行者'],
+            'ru': ['Люк', 'Соло', 'Скайуокер', 'галактик'],
+            'ja': ['ルーク', 'ソロ', 'ジェダイ', 'スカイウォーカー'],
+            'th': ['ลุค', 'เวเดอร์', 'เจได'],
+        }
+    },
+    {
+        id: 'tt0114558',
+        name: 'Strange Days',
+        expectedStrings: {
+            'en': ['Lenny', 'Macy', 'Faith'],
+            'es': ['Lenny', 'esto', 'qué', 'para'],
+            'pt': ['Lenny', 'Faith', 'isso', 'você'],
+            'fr': ['Lenny', 'Faith', 'vous', 'pas'],
+            'th': ['เลนนี่', 'เมซี่'],
+        }
+    }
+];
+
+export default movies;
+export type { MovieConfig };
+

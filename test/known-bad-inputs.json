@@ -1,0 +1,65 @@
+{
+  "_warning": "Do not manually edit this file, use mark-bad-input.js instead. These are genuinely corrupt inputs that have been properly investigated, encoding bugs MUST NOT be listed here.",
+  "hashes": {
+    "837bf28c6f54016c64e858d52738375fde39b72f7e8e0c3d0bd2c74204743d7d": {
+      "reason": "Corrupt encoding: file contains mixed Arabic UTF-8 byte sequences with Latin-1 chars - not valid Bulgarian Windows-1251 or UTF-8",
+      "markedAt": "2025-12-04T17:05:33.313Z",
+      "originalFile": "tt0133093/bg_3_subf2m.raw"
+    },
+    "207ab0c165cf77b7d69402638ea463ef425168bfea64e392eb2135702261bc43": {
+      "reason": "Mislabeled content: file contains Romanian text despite being labeled as Russian",
+      "markedAt": "2025-12-04T17:05:38.925Z",
+      "originalFile": "tt0133093/ru_2_subf2m.raw"
+    },
+    "b9444a03f15a2e8e3f4d7c1200acbbf08df5dd61f6e97fe51b069f55d4cf594c": {
+      "reason": "Mislabeled content: file contains Romanian text despite being labeled as Russian",
+      "markedAt": "2025-12-04T17:05:43.776Z",
+      "originalFile": "tt1630029/ru_1_subf2m.raw"
+    },
+    "cf1e2057308b180729dc3456f7dbefb21de1a013202c97336ca639c633a612f5": {
+      "reason": "Source file corruption: 3,537 UTF-8 replacement characters (U+FFFD) baked into raw bytes from OpenSubtitles",
+      "markedAt": "2025-12-07T20:33:02.328Z",
+      "originalFile": "tt0133093/kur_1_opensubtitles.raw"
+    },
+    "3ddb94a8d03fa48698616e8454ee7fe157f1d7c480cf1f7f011bbed44956f8b4": {
+      "reason": "Source file corruption: 1 UTF-8 replacement character (U+FFFD) at end of file from OpenSubtitles",
+      "markedAt": "2025-12-07T20:33:01.720Z",
+      "originalFile": "tt4154796/hin_2_opensubtitles.raw"
+    },
+    "e808e016c8fbccd3873a7aecbce66b9a4f7bf3eab857eed4d56271d5ee53f81f": {
+      "reason": "Source file corruption: 14,751 UTF-8 replacement characters (U+FFFD) baked into raw bytes from OpenSubtitles - encoding beyond repair",
+      "markedAt": "2025-12-07T20:33:37.278Z",
+      "originalFile": "tt0133093/tha_2_opensubtitles.raw"
+    },
+    "462944a98fda3365aeb09780f566b41f6b9b2b95005100de4972733faa450a34": {
+      "reason": "Source file corruption: Hebrew UTF-8 bytes where Thai expected, 18,697 replacement chars - original TIS-620 Thai encoding was destroyed during upload to OpenSubtitles",
+      "markedAt": "2025-12-08T23:46:35.293Z",
+      "originalFile": "tt4154796/tha_1_opensubtitles.raw"
+    },
+    "10ccc788674debfb6e85d06839cb62d0bc12cfab3346f262a0728a75b8bd400c": {
+      "reason": "Source file corruption: 686 UTF-8 replacement characters (U+FFFD) baked into source bytes from OpenSubtitles - encoding beyond repair",
+      "markedAt": "2025-12-08T23:46:36.528Z",
+      "originalFile": "tt0088323/fas_1_opensubtitles.raw"
+    },
+    "3a27cf9a2af3c9f02b2d1d06f7f9cec2c901359a9a44706bc57d7f24876683b0": {
+      "reason": "Source file corruption: Hebrew UTF-8 bytes where Thai expected, 7,959 replacement chars - original TIS-620 Thai encoding was destroyed during upload to OpenSubtitles",
+      "markedAt": "2025-12-08T23:46:37.753Z",
+      "originalFile": "tt0088323/tha_1_opensubtitles.raw"
+    },
+    "a6825bf8cbb2a0a84f68040468468f98b1be130bc52ba39dfb6f03791626bf54": {
+      "reason": "Source file corruption: Hebrew UTF-8 bytes where Thai expected, 12,573 replacement chars - original TIS-620 Thai encoding was destroyed during upload to OpenSubtitles",
+      "markedAt": "2025-12-08T23:46:39.290Z",
+      "originalFile": "tt0086190/tha_2_opensubtitles.raw"
+    },
+    "54b9dd713e593579b50c94ca1ea70e87271446611ae5d02ddc81a8f2c3043d6b": {
+      "reason": "Source file corruption: Hebrew UTF-8 bytes where Thai expected, 21,267 replacement chars - original TIS-620 Thai encoding was destroyed during upload to OpenSubtitles",
+      "markedAt": "2025-12-08T23:46:41.344Z",
+      "originalFile": "tt0114558/tha_1_opensubtitles.raw"
+    },
+    "5a042f41ed460371a2908dfdc0fd91d10e9d3fa1037dad587697b3f988409c91": {
+      "reason": "Source file corruption: Empty subtitle file - 22,276 lines of timestamp skeletons with no actual text content",
+      "markedAt": "2025-12-09T01:56:46.196Z",
+      "originalFile": "tt0133093/bul_1_opensubtitles.raw"
+    }
+  }
+}
